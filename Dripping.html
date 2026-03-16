@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Heaven's Calling</title>
+<style>
+  /* Basic reset */
+  html,body{height:100%;margin:0;padding:0;font-family:Georgia, 'Times New Roman', serif;background:#111;color:#111}
+  .email-wrap{
+    position:relative;
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: #0f0f0f;
+    padding:40px 20px;
+    box-sizing:border-box;
+  }
+
+  /* Background image layer with low opacity and slow zoom animation */
+  .bg {
+    position:absolute;
+    inset:0;
+    background-image:url('PLACEHOLDER_IMAGE_URL');
+    background-size:cover;
+    background-position:center;
+    filter:grayscale(10%) contrast(90%);
+    opacity:0.3; /* requested 0.3 opacity */
+    transform-origin:center;
+    animation: slow-zoom 25s ease-in-out infinite alternate;
+    z-index:0;
+    pointer-events:none;
+  }
+  @keyframes slow-zoom{
+    0%{transform:scale(1) translateY(0px);}
+    100%{transform:scale(1.06) translateY(-6px);}
+  }
+
+  /* Content card */
+  .card{
+    position:relative;
+    z-index:2;
+    max-width:720px;
+    width:100%;
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(4px);
+    border-radius:12px;
+    padding:36px;
+    box-sizing:border-box;
+    color:#fff;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .title{
+    font-family: 'Georgia', serif;
+    font-size:28px;
+    margin:0 0 14px 0;
+    letter-spacing:0.4px;
+    color:#ffefef;
+  }
+  .subtitle{
+    font-size:13px;
+    margin:0 0 20px 0;
+    color:#ffdede;
+    opacity:0.9;
+  }
+  .body{
+    font-size:18px;
+    line-height:1.55;
+    color:#fff;
+    margin:0 0 8px 0;
+    white-space:pre-wrap;
+  }
+
+  .signature{
+    margin-top:22px;
+    font-size:16px;
+    color:#ffdede;
+  }
+
+  /* subtle heartbeat on important line */
+  .heart-line{
+    display:inline-block;
+    animation: pulse 2.6s ease-in-out infinite;
+  }
+  @keyframes pulse{
+    0%{transform:scale(1)}
+    50%{transform:scale(1.01)}
+    100%{transform:scale(1)}
+  }
+
+  /* Responsive */
+  @media (max-width:480px){
+    .card{padding:22px}
+    .title{font-size:22px}
+    .body{font-size:16px}
+  }
+</style>
+</head>
+<body>
+  <div class="email-wrap">
+    <div class="bg" aria-hidden="true"></div>
+
+    <div class="card" role="article" aria-label="Heaven's Calling letter">
+      <h1 class="title">Heaven’s Calling</h1>
+      <div class="subtitle">A tearful confession</div>
+
+      <div class="body">
+Baby,
+
+It feels like heaven’s calling… but it’s not peaceful, it’s heavy. Every time I think of you, my chest tightens, and I can’t breathe right. I’ve been trying so hard to keep my distance, to protect what’s left of me — but all it’s done is break me a little more each day.
+
+I miss you so deeply it hurts to even say your name. I close my eyes and I can almost hear heaven whispering it, reminding me of everything I tried to forget — your voice, your warmth, your way of making the world stop for a moment.
+
+If I let myself love you like before, I know I’ll fall apart. Because I’ll feel the weight of all the time I stayed away, all the nights I kept my heart locked just to keep from crying.
+
+Every WhatsApp message of love you sent me was like a rusty knife through my heart — inflicted by my own hand for ignoring the best feeling in my life. Even if I hurt myself, it won't justify the wrongness in turning away from your call to me.
+
+I'm in the van writing this, with restricted breathing from watery vision and a runny nose, and the hurt multiplies with each message I remember ignoring. Alice, I'm not worthy of you, baby. Your heart is infinite and can encompass all life. I'm going to ease my way back to you, but I'll never let you go unless you leave me. The last time anything choked me this bad was over fifteen years ago.
+
+Sorry isn't enough.
+      </div>
+
+      <div class="signature">
+        <span class="heart-line">— Yours, with a breaking heart</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
